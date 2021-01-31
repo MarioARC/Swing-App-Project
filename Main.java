@@ -23,9 +23,34 @@ public class Main
       {
         System.out.println("Pressed");
       }
-    }); // end ActionListener
+    }); // end ActionListener button1
 
+    // Button 2
+    JButton button2 = new JButton("Second Button");
+
+    button2.addActionListener(new ActionListener()
+    {
+      public void actionPerformed(ActionEvent e)
+      {
+        System.out.println("Different Pressed");
+      }
+    }); // end ActionListener button2
+
+    // Button 3
+    JButton button3 = new JButton("Third Button");
+
+    button3.addActionListener(new ActionListener()
+    {
+      public void actionPerformed(ActionEvent e)
+      {
+        System.out.println("Ok this should work");
+      }
+    }); // end ActionListener button3
+
+    // add components to panel1
     panel1.add(button1);
+    panel1.add(button2);
+    panel1.add(button3);
 
     frame1.getContentPane().add(BorderLayout.NORTH, panel1);
   }
