@@ -11,5 +11,22 @@ public class Main
     frame1.setSize(500, 500);
     frame1.setVisible(true);
 
+    // Panel 1
+    JPanel panel1 = new JPanel(new GridLayout(2, 2, 20, 20));
+
+    // Button 1
+    JButton button1 = new JButton("Button Test");
+
+    button1.addActionListener(new ActionListener()
+    {
+      public void actionPerformed(ActionEvent e)
+      {
+        System.out.println("Pressed");
+      }
+    }); // end ActionListener
+
+    panel1.add(button1);
+
+    frame1.getContentPane().add(BorderLayout.NORTH, panel1);
   }
 }
