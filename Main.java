@@ -20,6 +20,15 @@ public class Main
     // Label 1
     JLabel label1 = new JLabel("Label");
 
+    // Label 2
+    JLabel label2 = new JLabel("Another Label");
+
+    // TextField 1
+    JTextField textfield1 = new JTextField(10);
+
+    // TextField 2
+    JTextField textfield2 = new JTextField(10);
+
     // Button 1
     JButton button1 = new JButton("Button Test");
 
@@ -57,9 +66,14 @@ public class Main
     panel1.add(button1);
     panel1.add(button2);
     panel1.add(button3);
+
+    // add components to panel2
     panel2.add(label1);
+    panel2.add(label2);
+    panel2.add(textfield1);
+    panel2.add(textfield2);
 
     frame1.getContentPane().add(BorderLayout.NORTH, panel1);
-    frame1.getContentPane().add(BorderLayout.CENTER, panel2);
+    frame1.getContentPane().add(BorderLayout.SOUTH, panel2);
   }
 }
