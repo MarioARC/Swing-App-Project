@@ -43,18 +43,23 @@ public class Main
     }); // end ActionListener button1
 
     // Button 2
-    JButton button2 = new JButton("Second Button");
+    JButton button2 = new JButton("Get all text");
 
     button2.addActionListener(new ActionListener()
     {
       public void actionPerformed(ActionEvent e)
       {
-        System.out.println("Different Pressed");
+        String allText = textfield1.getText() + " " + textfield2.getText();
+
+        System.out.println(allText); // test if it adds the textfields together
+
+        textfield1.setText("");
+        textfield2.setText("");
       }
     }); // end ActionListener button2
 
     // Button 3
-    JButton button3 = new JButton("Third Button");
+    JButton button3 = new JButton("Insert the text");
 
     button3.addActionListener(new ActionListener()
     {
@@ -76,6 +81,6 @@ public class Main
     panel2.add(textfield2);
 
     frame1.getContentPane().add(BorderLayout.NORTH, panel1);
-    frame1.getContentPane().add(BorderLayout.SOUTH, panel2);
+    frame1.getContentPane().add(BorderLayout.CENTER, panel2);
   }
 }
