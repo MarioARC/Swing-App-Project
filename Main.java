@@ -11,8 +11,11 @@ public class Main
     frame1.setSize(500, 500);
     frame1.setVisible(true);
 
-    // Panel 1
+    // Panel 1 for buttons
     JPanel panel1 = new JPanel(new GridLayout(2, 2, 20, 20));
+
+    // Panel 2 for labels and textfields
+    JPanel panel2 = new JPanel(new GridLayout(2, 2, 20, 20));
 
     // Label 1
     JLabel label1 = new JLabel("Label");
@@ -54,8 +57,9 @@ public class Main
     panel1.add(button1);
     panel1.add(button2);
     panel1.add(button3);
-    panel1.add(label1);
+    panel2.add(label1);
 
     frame1.getContentPane().add(BorderLayout.NORTH, panel1);
+    frame1.getContentPane().add(BorderLayout.CENTER, panel2);
   }
 }
