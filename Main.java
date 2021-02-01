@@ -51,6 +51,8 @@ public class Main
       {
         String allText = textfield1.getText() + " " + textfield2.getText();
 
+        label2.setText(allText);
+
         System.out.println(allText); // test if it adds the textfields together
 
         textfield1.setText("");
@@ -59,13 +61,13 @@ public class Main
     }); // end ActionListener button2
 
     // Button 3
-    JButton button3 = new JButton("Insert the text");
+    JButton button3 = new JButton("Clear text");
 
     button3.addActionListener(new ActionListener()
     {
       public void actionPerformed(ActionEvent e)
       {
-        System.out.println("Ok this should work");
+        label2.setText("Waiting...");
       }
     }); // end ActionListener button3
 
