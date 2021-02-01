@@ -18,10 +18,10 @@ public class Main
     JPanel panel2 = new JPanel(new GridLayout(2, 2, 20, 20));
 
     // Label 1
-    JLabel label1 = new JLabel("Label");
+    JLabel label1 = new JLabel("Greetings");
 
     // Label 2
-    JLabel label2 = new JLabel("Another Label");
+    JLabel label2 = new JLabel("Waiting...");
 
     // TextField 1
     JTextField textfield1 = new JTextField(10);
@@ -29,14 +29,16 @@ public class Main
     // TextField 2
     JTextField textfield2 = new JTextField(10);
 
-    // Button 1
-    JButton button1 = new JButton("Button Test");
+    // Button 1 to change Label 1
+    JButton button1 = new JButton("Change greeting");
 
     button1.addActionListener(new ActionListener()
     {
       public void actionPerformed(ActionEvent e)
       {
-        System.out.println("Pressed");
+        String[] phrases = {"Hello", "Hi!", "Howdy", "How's it going?", "Welcome", "Nice to meet you"};
+        String newText = phrases[(int)(Math.random() * phrases.length)];
+        label1.setText(newText);
       }
     }); // end ActionListener button1
 
